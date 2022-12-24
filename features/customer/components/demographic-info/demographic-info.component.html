@@ -1,0 +1,97 @@
+<etiya-background-template [width]="'80rem'" [height]="'53.1rem'">
+  <etiya-pop-up *ngIf="show"></etiya-pop-up>
+  <form [formGroup]="demographicInfoForm" (submit)="onDemographicInfoSubmit()" >
+    <div class="container ">
+      <div class="row mx-5">
+        <h1>Demographic Info</h1>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <etiya-input
+            [inputLabel]="'First Name'"
+            [inputType]="'text'"
+            [requiredField]="true"
+            formControlName="firstName"
+          ></etiya-input>
+        </div>
+        <div class="col-6">
+          <etiya-input
+            [inputLabel]="'Middle Name'"
+            [inputType]="'text'"
+            formControlName="middleName"
+          ></etiya-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <etiya-input
+            [inputLabel]="'Last Name'"
+            [inputType]="'text'"
+            [requiredField]="true"
+            formControlName="lastName"
+          ></etiya-input>
+        </div>
+        <div class="col-6">
+          <etiya-input
+            [inputLabel]="'Birth Date'"
+            [inputType]="'date'"
+            [requiredField]="true"
+            formControlName="birthDate"
+          ></etiya-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <etiya-select-option
+            formControlName="gender"
+            [inputLabel]="'Gender'"
+            [requiredField]="true"
+          >
+          </etiya-select-option>
+        </div>
+        <div class="col-6">
+          <etiya-input
+            formControlName="fatherName"
+            [inputLabel]="'Father Name'"
+            [inputType]="'text'"
+          ></etiya-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <etiya-input
+            formControlName="motherName"
+            [inputLabel]="'Mother Name'"
+            [inputType]="'text'"
+          ></etiya-input>
+        </div>
+        <div class="col-6">
+          <etiya-input
+            formControlName="nationalityID"
+            [inputLabel]="'Nationality ID'"
+            [inputType]="'text'"
+            [requiredField]="true"
+          ></etiya-input>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between">
+        <div class="col-2 etiya-button-left">
+          <etiya-button
+            [buttonColor]="'bg-gray'"
+            [buttonText]="'Cancel'"
+          ></etiya-button>
+        </div>
+        <div class="col-2 etiya-button-right">
+          <etiya-button
+            [routerLink]="'/customer/address_info'"
+            [buttonType]="'submit'"
+            [icon]="'fa-solid fa-chevron-right'"
+            [buttonColor]="'bg-orange'"
+            [buttonText]="'Next'"
+          ></etiya-button>
+        </div>
+      </div>
+    </div>
+  </form>
+</etiya-background-template>
+

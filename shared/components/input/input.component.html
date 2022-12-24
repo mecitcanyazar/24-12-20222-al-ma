@@ -1,0 +1,13 @@
+<div class="form">
+  <div class="input-cont">
+    <label class="input"
+      >{{ inputLabel }} <span *ngIf="requiredField">*</span></label
+    >
+    <input
+      [type]="inputType"
+      [(ngModel)]="value"
+      (ngModelChange)="onChange($event)"
+      (blur)="onTouched()"
+    />
+  </div>
+</div>

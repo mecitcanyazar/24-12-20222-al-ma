@@ -1,0 +1,40 @@
+<etiya-background-template [width]="'80rem'" [height]="'53.1rem'">
+  <div class="container">
+    <div class="row">
+      <h1>Address Info</h1>
+    </div>
+    <etiya-background-template
+      [width]="'27.8rem'"
+      [height]="'33.7rem'"
+      [ngStyle]="{ 'margin-left': '167px' }"
+    >
+      <div class="d-flex justify-content-center">
+        <etiya-button
+          [ngStyle]="{ 'margin-top': '167px' }"
+          [buttonType]="'button'"
+          [icon]="'fa-solid fa-plus'"
+          [buttonColor]="'bg-orange'"
+          [buttonText]="'Add New Address'"
+        ></etiya-button>
+      </div>
+    </etiya-background-template>
+
+    <div class="row d-flex justify-content-between">
+      <div class="col-2 etiya-button-left">
+        <etiya-button
+          [routerLink]="'/customer/demographic_info'"
+          [buttonColor]="'bg-gray'"
+          [buttonText]="'Cancel'"
+        ></etiya-button>
+      </div>
+      <div class="col-2 etiya-button-right">
+        <etiya-button
+          [buttonType]="'submit'"
+          [icon]="'fa-solid fa-chevron-right'"
+          [buttonColor]="'bg-orange'"
+          [buttonText]="'Next'"
+        ></etiya-button>
+      </div>
+    </div>
+  </div>
+</etiya-background-template>
